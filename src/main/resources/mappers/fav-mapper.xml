@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.FavMapper">
+    <insert id="insertFav" parameterType="favVO">
+        insert into fav
+        values (fav_pk_seq.NEXTVAL, #{mid}, #{bnum}, #{btitle}, #{filename})
+    </insert>
+
+   <delete id="deleteFav" parameterType="favVO">
+       DELETE FROM fav WHERE mid = #{mid} AND bnum = #{bnum}
+   </delete>
+
+    <select id="getFavList" resultType="favVO">
+        SELECT * FROM fav where mid=#{mid}
+    </select>
+
+    <select id="getFav" resultType="favVO">
+        SELECT * FROM fav WHERE mid = #{mid} AND bnum = #{bnum}
+    </select>
+
+    <select id="isFav" resultType="int">
+        SELECT COUNT(1) FROM fav WHERE mid = #{mid} AND bnum = #{bnum}
+    </select>
+
+    <select id="getTotalCount" resultType="int">
+        select count(1) from FAV WHERE mid = #{mid}
+    </select>
+
+    <select id="getPageList" resultType="FavVO">
+        select
+            fnum,
+            mid,
+            bnum,
+            btitle,
+            filename
+        from (
+            select
+                rownum as pnum,
+                fnum,
+                mid,
+                bnum,
+                btitle,
+                filename
+            from FAV
+            where mid = #{mid}
+            order by fnum DESC)
+        where pnum
+            between #{page} * #{size} + 1
+            and (#{page} + 1) * #{size}
+    </select>
+
+
+</mapper>

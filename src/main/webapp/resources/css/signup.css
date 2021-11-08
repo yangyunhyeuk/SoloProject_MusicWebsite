@@ -1,0 +1,30 @@
+/*eye css*/
+div.form-group i {
+    position: absolute;
+    left: 85%;
+    top: 12px;
+    color: black;
+}
+
+#signup {
+    margin: auto;
+    width: 40%;
+}
+
+@media only screen and (max-width: 768px) {
+    #signup {
+        width: 60% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #signup {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #secmedia {
+        padding: 0 !important;
+    }
+}

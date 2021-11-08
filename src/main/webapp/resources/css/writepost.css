@@ -1,0 +1,32 @@
+input#filename{
+    width:100%;
+}
+
+#writepost {
+    margin: auto;
+    width: 60%;
+}
+
+@media only screen and (max-width: 1024px) {
+    #writepost {
+        width: 60% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #writepost {
+        width: 70% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #writepost {
+        width: 85% !important;
+    }
+}
+
+@media only screen and (max-width: 424px) {
+    #writepost {
+        width: 100% !important;
+    }
+}

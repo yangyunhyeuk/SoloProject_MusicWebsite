@@ -1,0 +1,31 @@
+
+
+/*   eye css */
+div.form-group i {
+    position: absolute;
+    left: 85%;
+    top: 12px;
+    color: black;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #signin{
+        width:40% !important;
+    }
+}
+@media only screen and (max-width: 768px) {
+    #signin{
+        width:60% !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #signin{
+        width:100% !important;
+    }
+}
+@media only screen and (max-width: 320px) {
+    #secmedia{
+        padding:0 !important;
+    }
+}

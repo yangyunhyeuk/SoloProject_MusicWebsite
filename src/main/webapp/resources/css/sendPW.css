@@ -1,0 +1,17 @@
+@media only screen and (max-width: 768px) {
+    #sendpw {
+        width: 60% !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #sendpw {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #secmedia {
+        padding: 0 !important;
+    }
+}

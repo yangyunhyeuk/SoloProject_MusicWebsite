@@ -1,0 +1,28 @@
+.contact-social li a:hover {
+    opacity: 0.9;
+}
+
+.col-md-8 .row p {
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 768px) {
+    #myinfo{
+        width:60% !important;
+    }
+}
+@media only screen and (max-width: 600px) {
+    #myinfo{
+        width:100% !important;
+    }
+}
+@media only screen and (max-width: 320px) {
+    #secmedia{
+        padding:0 !important;
+    }
+}
+
+.col-md-12{
+    padding: 10px;
+}

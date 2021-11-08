@@ -1,0 +1,7 @@
+{
+  "name": "personal_project_callie_new",
+  "version": "1.0.0",
+  "devDependencies": {
+    "request": "^2.88.2"
+  }
+}
